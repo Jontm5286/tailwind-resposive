@@ -1,0 +1,83 @@
+{
+  "name": "tailwind-responsive-formatter",
+  "displayName": "Tailwind Responsive Formatter",
+  "description": "Format and organize Tailwind CSS classes in your code",
+  "version": "1.0.0",
+  "publisher": "trae-ai",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Formatters"
+  ],
+  "activationEvents": [
+    "onLanguage:html",
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescriptreact",
+    "onLanguage:vue",
+    "onLanguage:svelte",
+    "onCommand:tailwind-formatter.formatTailwindClasses"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "tailwind-responsive.format",
+        "title": "Format Tailwind Classes"
+      }
+    ],
+    "configuration": {
+      "title": "Tailwind Formatter",
+      "keybindings": [
+        {
+          "command": "tailwind-responsive.format",
+          "key": "ctrl+alt+t",
+          "mac": "cmd+alt+t"
+        }
+      ],
+      "properties": {
+        "tailwindFormatter.sortAlphabetically": {
+          "type": "boolean",
+          "default": true,
+          "description": "Sort classes alphabetically within groups"
+        },
+        "tailwindFormatter.autoFormatOnPaste": {
+          "type": "boolean",
+          "default": true,
+          "description": "Auto-format when pasting Tailwind classes"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "@types/vscode": "^1.60.0",
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
+    "@vscode/vsce": "^3.3.2",
+    "eslint": "^8.18.0",
+    "typescript": "^4.9.5"
+  },
+  "keywords": [
+    "tailwind",
+    "tailwindcss",
+    "formatter",
+    "css",
+    "classes"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trae-ai/tailwind-formatter.git"
+  }
+}
