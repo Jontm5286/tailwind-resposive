@@ -16,7 +16,7 @@ Esta es una lista de pasos sugeridos y puntos de discusión para configurar y me
   - Ejecuta `git remote add origin URL_DEL_REPOSITORIO` (reemplaza `URL_DEL_REPOSITORIO` con tu URL).
   - Verifica con `git remote -v`.
 - [ ] **Subir Cambios a GitHub:** Ejecuta `git push -u origin main` (o `master` si esa es tu rama por defecto).
-- [ ] **Crear `.gitignore`:**
+- [x] **Crear `.gitignore`:**
   - Crea un archivo llamado `.gitignore` en la raíz.
   - Añade entradas comunes para Node.js y VS Code extensions, como:
     ```
